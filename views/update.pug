@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Actualizar Futbolista
+    body 
+        h1 Actualizar Futbolista
+        form(action="/update" method="POST")
+            input(type="hidden" name="id" value=futbolista.id)
+            label(for="nombre") Nombre:
+            input(type="text" name="nombre" value=futbolista.nombre)
+            label(for="equipoId") Equipo:
+            select(name="equipoId")
+                each equipo in equipos
+                    option(value=equipo.id selected=equipo.id == futbolista.equipo_id) #{equipo.nombre}
+            button(type="submit") Actualizar
+        a(href="/") Volver a la página principal

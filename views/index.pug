@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Mi Aplicación
+        link(rel="stylesheet" href="styles.css")
+    body 
+        .container
+            h1 Mi Aplicación
+            h2 Datos existentes
+            ul.datos-lista
+                each dato in datos
+                    li.dato-item
+                        span.dato-nombre #{dato.nombre} - #{dato.equipo}
+                        a.btn(href=`/update/${dato.id}`) Actualizar
+                        form(action="/delete" method="POST" style="display:inline")
+                            input(type="hidden" name="id" value=dato.id)
+                            button.btn(type="submit") Eliminar
+            h2 Agregar nuevo dato
+            form(action="/" method="POST" class="form-agregar")
+                input(type="text" name="nuevoDato" placeholder="Nombre del nuevo dato" class="input-text")
+                select(name="equipoId" class="select-equipo")
+                    option(value="1") FC Barcelona
+                    option(value="2") Real Madrid
+                    option(value="3") Manchester United
+                    option(value="4") Liverpool
+                    option(value="5") Bayern Múnich
+                    option(value="6") Paris Saint-Germain
+                    option(value="7") Manchester City
+                    option(value="8") Juventus
+                    option(value="9") Chelsea
+                    option(value="10") Inter de Milán
+                button(type="submit" class="btn") Agregar

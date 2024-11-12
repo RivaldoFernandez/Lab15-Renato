@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.datos-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dato-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dato-nombre {
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.form-agregar {
+    margin-top: 20px;
+}
+
+.input-text, .select-equipo {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-text {
+    width: 200px;
+}
+
+.select-equipo {
+    width: 150px;
+}
